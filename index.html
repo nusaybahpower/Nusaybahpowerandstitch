@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,53 +14,57 @@
             --light: #f8f9fa;
             --dark: #212529;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-    
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--dark);
             line-height: 1.6;
             background-color: #f9f9f9;
         }
-    
+
         /* Header Styles */
         header {
             background: var(--primary);
             color: white;
             padding: 1rem 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-    
+
         .logo {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
         }
-    
+
         .logo img {
-            height: 80px;
             width: 80px;
-            border-radius: 50%; /* Circular logo */
+            height: 80px;
+            border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--secondary);
+            border: 2px solid var(--secondary);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
         }
-    
+
         .logo-text h1 {
-            margin: 0;
             font-size: 1.8rem;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
-    
+
         .logo-text p {
-            margin: 0;
             font-style: italic;
             color: var(--secondary);
+            font-size: 1rem;
         }
-    
+
         /* Navigation */
         nav {
             background: var(--dark);
@@ -68,18 +73,18 @@
             top: 0;
             z-index: 100;
         }
-    
+
         nav ul {
             display: flex;
             justify-content: center;
             list-style: none;
             flex-wrap: wrap;
         }
-    
+
         nav li {
             margin: 0 1.5rem;
         }
-    
+
         nav a {
             color: white;
             text-decoration: none;
@@ -87,18 +92,18 @@
             transition: color 0.3s;
             font-size: 1.1rem;
         }
-    
+
         nav a:hover {
             color: var(--secondary);
         }
-    
+
         /* Hero Section */
         .hero {
             display: flex;
             min-height: 400px;
             flex-wrap: wrap;
         }
-    
+
         .hero-section {
             flex: 1;
             min-width: 300px;
@@ -110,22 +115,22 @@
             color: white;
             text-align: center;
         }
-    
+
         .power-hero {
             background: linear-gradient(rgba(10, 36, 99, 0.8), rgba(10, 36, 99, 0.8)), url('https://images.unsplash.com/photo-1588690154757-badf4644191f?ixlib=rb-4.0.3');
             background-size: cover;
         }
-    
+
         .stitch-hero {
             background: linear-gradient(rgba(62, 146, 204, 0.8), rgba(62, 146, 204, 0.8)), url('https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-4.0.3');
             background-size: cover;
         }
-    
+
         .hero-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-    
+
         .hero-btn {
             background: var(--secondary);
             color: var(--dark);
@@ -139,25 +144,25 @@
             text-decoration: none;
             display: inline-block;
         }
-    
+
         .hero-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-    
+
         /* Section Styles */
         .section-container {
             padding: 3rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-    
+
         .section-title {
             text-align: center;
             margin-bottom: 2.5rem;
             position: relative;
         }
-    
+
         .section-title h2 {
             display: inline-block;
             background: white;
@@ -167,7 +172,7 @@
             font-size: 2rem;
             color: var(--primary);
         }
-    
+
         .section-title::after {
             content: "";
             position: absolute;
@@ -178,7 +183,7 @@
             background: var(--primary);
             z-index: 0;
         }
-    
+
         /* Products Grid */
         .products-grid {
             display: grid;
@@ -186,47 +191,47 @@
             gap: 2rem;
             margin-bottom: 3rem;
         }
-    
+
         .product-card {
             background: white;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-    
+
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-    
+
         .product-img-container {
             height: 250px;
             overflow: hidden;
         }
-    
+
         .product-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
-    
+
         .product-card:hover .product-img {
             transform: scale(1.05);
         }
-    
+
         .product-info {
             padding: 1.5rem;
         }
-    
+
         .product-category {
             color: var(--secondary);
             font-weight: bold;
             margin-bottom: 0.5rem;
             font-size: 0.9rem;
         }
-    
+
         .product-title {
             margin: 0 0 0.5rem;
             font-size: 1.2rem;
@@ -276,7 +281,7 @@
             display: inline-block;
             margin-top: 0.3rem;
         }
-    
+
         .product-btn {
             background: var(--primary);
             color: white;
@@ -291,97 +296,97 @@
             transition: background 0.3s;
             font-weight: 500;
         }
-    
+
         .product-btn:hover {
             background: var(--accent);
         }
-    
+
         .whatsapp-btn {
             background: #25D366;
         }
-    
+
         .whatsapp-btn:hover {
             background: #128C7E;
         }
-    
+
         /* About Section */
         .about-section {
             background: var(--light);
             padding: 3rem 2rem;
             text-align: center;
         }
-    
+
         .about-content {
             max-width: 800px;
             margin: 0 auto;
         }
-    
+
         .about-content p {
             margin-bottom: 1.5rem;
         }
-    
+
         .about-content ul {
             text-align: left;
             max-width: 600px;
             margin: 1.5rem auto;
         }
-    
+
         .about-content li {
             margin-bottom: 0.8rem;
         }
-    
+
         /* Contact Section */
         .contact-section {
             padding: 3rem 2rem;
             max-width: 1000px;
             margin: 0 auto;
         }
-    
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-    
+
         .contact-info {
             background: var(--light);
             padding: 1.5rem;
             border-radius: 8px;
         }
-    
+
         .contact-info h3 {
             color: var(--primary);
             margin-bottom: 1rem;
         }
-    
+
         .contact-info p {
             margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
-    
+
         .contact-info a {
             color: var(--dark);
             text-decoration: none;
             transition: color 0.3s;
         }
-    
+
         .contact-info a:hover {
             color: var(--accent);
         }
-    
+
         .contact-form {
             background: var(--light);
             padding: 1.5rem;
             border-radius: 8px;
         }
-    
+
         .contact-form h3 {
             color: var(--primary);
             margin-bottom: 1rem;
         }
-    
+
         .contact-form input,
         .contact-form textarea,
         .contact-form select {
@@ -392,7 +397,7 @@
             border-radius: 5px;
             font-family: inherit;
         }
-    
+
         .contact-form button {
             background: var(--primary);
             color: white;
@@ -404,11 +409,11 @@
             font-weight: bold;
             transition: background 0.3s;
         }
-    
+
         .contact-form button:hover {
             background: var(--accent);
         }
-    
+
         /* Footer */
         footer {
             background: var(--dark);
@@ -417,14 +422,14 @@
             padding: 2.5rem 2rem;
             margin-top: 3rem;
         }
-    
+
         .social-icons {
             margin: 1.5rem 0;
             display: flex;
             justify-content: center;
             gap: 1.5rem;
         }
-    
+
         .social-icons a {
             display: inline-flex;
             align-items: center;
@@ -437,16 +442,16 @@
             font-size: 1.3rem;
             transition: all 0.3s ease;
         }
-    
+
         .social-icons a:hover {
             background: var(--secondary);
             transform: translateY(-3px);
         }
-    
+
         footer p {
             margin: 0.5rem 0;
         }
-    
+
         /* Floating Social Media Icons */
         .floating-social {
             position: fixed;
@@ -457,7 +462,7 @@
             gap: 15px;
             z-index: 1000;
         }
-    
+
         .floating-social a {
             display: flex;
             align-items: center;
@@ -467,81 +472,75 @@
             border-radius: 50%;
             color: white;
             font-size: 1.3rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             text-decoration: none;
         }
-    
+
         .floating-social a:hover {
             transform: translateY(-5px);
         }
-    
+
         .floating-tiktok {
             background: #000000;
         }
-    
+
         .floating-instagram {
             background: #E1306C;
         }
-    
+
         .floating-facebook {
             background: #3b5998;
         }
-    
+
         /* Responsive Design */
         @media (max-width: 567px) {
             nav li {
                 margin: 0 0.8rem;
             }
-        
-            .logo {
-                flex-direction: column;
-                text-align: center;
-                gap: 0.5rem;
-            }
-        
+
             .logo img {
-                height: 80px;
-                width: 80px;
+                height: 90px;
+                width: 90px;
             }
-        
+
             .logo-text h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
-        
+
             .hero-section {
                 min-height: 300px;
                 padding: 1.5rem;
             }
-        
+
             .section-container {
                 padding: 2rem 1rem;
             }
-        
+
             .products-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
-        
+
             .contact-grid {
                 grid-template-columns: 1fr;
             }
-        
+
             .floating-social {
                 bottom: 10px;
                 right: 10px;
             }
-        
+
             .floating-social a {
                 width: 45px;
                 height: 45px;
                 font-size: 1.1rem;
             }
-        
+
             .social-icons {
                 gap: 1rem;
             }
-        
+
             .social-icons a {
                 width: 40px;
                 height: 40px;
@@ -550,6 +549,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -611,7 +611,7 @@
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-img-container">
-                    <img class="product-img" src="https://via.placeholder.com/300x400/f5f5f5/333333?text=Bespoke+Abaya" alt="Bespoke Abaya">
+                    <img class="product-img" src="./Images/tailoring/abaya1.jpg" alt="Bespoke Abaya">
                 </div>
                 <div class="product-info">
                     <div class="product-category">Custom Tailoring</div>
@@ -630,12 +630,12 @@
 
             <div class="product-card">
                 <div class="product-img-container">
-                    <img class="product-img" src="https://via.placeholder.com/300x400/f5f5f5/333333?text=Designer+Dress" alt="Designer Dress">
+                    <img class="product-img" src="./Images/tailoring/abaya1 (2).png" alt="Designer Dress">
                 </div>
                 <div class="product-info">
                     <div class="product-category">Custom Tailoring</div>
                     <h3 class="product-title">Bespoke Dress</h3>
-                    <div class="product-brand">Premium alterations</div>
+                    <div class="product-brand">ModestStyles</div>
                     <div class="product-price">
                         <span class="current-price">₦00</span>
                         <span class="original-price">₦000</span>
@@ -649,7 +649,7 @@
 
             <div class="product-card">
                 <div class="product-img-container">
-                    <img class="product-img" src="https://via.placeholder.com/300x400/f5f5f5/333333?text=Baby+Dress" alt="Baby Clothes">
+                    <img class="product-img" src="./Images/tailoring/abaya5.png" alt="Baby Clothes">
                 </div>
                 <div class="product-info">
                     <div class="product-category">Custom Tailoring</div>
@@ -666,6 +666,46 @@
                 </div>
             </div>
         </div>
+
+        <div class="product-card">
+            <div class="product-img-container">
+                <img class="product-img" src="./Images/tailoring/abaya3.png" alt="Baby Clothes">
+            </div>
+            <div class="product-info">
+                <div class="product-category">Custom Tailoring</div>
+                <h3 class="product-title">Custom Abaya</h3>
+                <div class="product-brand">Brand: Premium Alteration</div>
+                <div class="product-price">
+                    <span class="current-price">₦000</span>
+                    <span class="original-price">₦000</span>
+                    <span class="discount">10% OFF</span>
+                </div>
+                <a href="https://wa.me/2348105257672" class="product-btn whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Book Service
+                </a>
+            </div>
+        </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img-container">
+                <img class="product-img" src="./Images/tailoring/abaya2.png" alt="Baby Clothes">
+            </div>
+            <div class="product-info">
+                <div class="product-category">Custom Tailoring</div>
+                <h3 class="product-title">Custom Baby Dresses</h3>
+                <div class="product-brand">Brand: TinyFashion</div>
+                <div class="product-price">
+                    <span class="current-price">₦000</span>
+                    <span class="original-price">₦000</span>
+                    <span class="discount">9% OFF</span>
+                </div>
+                <a href="https://wa.me/2348105257672" class="product-btn whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Book Service
+                </a>
+            </div>
+        </div>
+        </div>
     </section>
 
 
@@ -676,10 +716,10 @@
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-img-container">
-                    <img class="product-img" src="https://via.placeholder.com/300x400/f5f5f5/333333?text=Egyptian+Abaya" alt="Embroidered Abaya">
+                    <img class="product-img" src="./Images/fashion/fashion.jpg" alt="Embroidered Abaya">
                 </div>
                 <div class="product-info">
-                    <div class="product-category">EGYPTIAN🇪🇬ABAYA Back & Font Design</div>
+                    <div class="product-category">EGYPTIAN ABAYA Back & Font Design</div>
                     <h3 class="product-title">Embroidered Abaya</h3>
                     <div class="product-brand">Brand: Egyptian </div>
                     <div class="product-price">
@@ -693,45 +733,83 @@
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-img-container">
-                    <img class="product-img" src="https://via.placeholder.com/300x400/f5f5f5/333333?text=Dubai+Abaya" alt="Dubai Abaya">
-                </div>
-                <div class="product-info">
-                    <div class="product-category">Premium Abaya</div>
-                    <h3 class="product-title">Dubai Abaya</h3>
-                    <div class="product-brand">Brand: DubaiAbaya</div>
-                    <div class="product-price">
-                        <span class="current-price">₦24,000</span>
-                        <span class="original-price">₦26,000</span>
-                        <span class="discount">8% OFF</span>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img class="product-img" src="./Images/fashion/fashion3.jpg" alt="Embroidered Abaya">
                     </div>
-                    <a href="https://wa.me/2348105257672" class="product-btn whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </a>
+                    <div class="product-info">
+                        <div class="product-category">EGYPTIAN ABAYA Back & Font Design</div>
+                        <h3 class="product-title">Embroidered Abaya</h3>
+                        <div class="product-brand">Brand: Egyptian </div>
+                        <div class="product-price">
+                            <span class="current-price">₦40,000</span>
+                            <span class="original-price">₦45,000</span>
+                            <span class="discount">11% OFF</span>
+                        </div>
+                        <a href="https://wa.me/2348105257672" class="product-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img class="product-img" src="./Images/fashion/fashion2.jpg" alt="Dubai Abaya">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Premium Abaya</div>
+                        <h3 class="product-title">Dubai Abaya</h3>
+                        <div class="product-brand">Brand: DubaiAbaya</div>
+                        <div class="product-price">
+                            <span class="current-price">₦24,000</span>
+                            <span class="original-price">₦26,000</span>
+                            <span class="discount">8% OFF</span>
+                        </div>
+                        <a href="https://wa.me/2348105257672" class="product-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img class="product-img" src="./Images/fashion/abaya.jpg" alt="Dubai Abaya">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Premium Abaya</div>
+                        <h3 class="product-title">Dubai Abaya</h3>
+                        <div class="product-brand">Brand: DubaiAbaya</div>
+                        <div class="product-price">
+                            <span class="current-price">₦24,000</span>
+                            <span class="original-price">₦26,000</span>
+                            <span class="discount">8% OFF</span>
+                        </div>
+                        <a href="https://wa.me/2348105257672" class="product-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img class="product-img" src="./Images/fashion/fashion5.jpg" alt="New Bouba">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Bouba</div>
+                        <h3 class="product-title">New Boubas</h3>
+                        <div class="product-brand">Brand: BrandNew</div>
+                        <div class="product-price">
+                            <span class="current-price">₦7,500</span>
+                            <span class="original-price">₦8,500</span>
+                            <span class="discount">12% OFF</span>
+                        </div>
+                        <a href="https://wa.me/2348105257672" class="product-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-img-container">
-                    <img class="product-img" src="https://via.placeholder.com/300x400/f5f5f5/333333?text=New+Bouba" alt="New Bouba">
-                </div>
-                <div class="product-info">
-                    <div class="product-category">Bouba</div>
-                    <h3 class="product-title">New Boubas</h3>
-                    <div class="product-brand">Brand: BrandNew</div>
-                    <div class="product-price">
-                        <span class="current-price">₦7,500</span>
-                        <span class="original-price">₦8,500</span>
-                        <span class="discount">12% OFF</span>
-                    </div>
-                    <a href="https://wa.me/2348105257672" class="product-btn whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </a>
-                </div>
-            </div>
-        </div>
-        
     </section>
 
 
@@ -742,7 +820,7 @@
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-img-container">
-                    <img class="product-img" src="https://via.placeholder.com/300x400/f5f5f5/333333?text=Oraimo+Powerbank" alt="20,000mAh Power Bank">
+                    <img class="product-img" src="./Images/power/power1.jpg" alt="20,000mAh Power Bank">
                 </div>
                 <div class="product-info">
                     <div class="product-category">Power Banks</div>
@@ -763,7 +841,7 @@
 
             <div class="product-card">
                 <div class="product-img-container">
-                    <img class="product-img" src="https://via.placeholder.com/300x400/f5f5f5/333333?text=Oale+Powerbank" alt="Power Bank">
+                    <img class="product-img" src="./Images/power/IMG.jpg" alt="Power Bank">
                 </div>
                 <div class="product-info">
                     <div class="product-category">Power Bank</div>
@@ -782,7 +860,45 @@
 
             <div class="product-card">
                 <div class="product-img-container">
-                    <img class="product-img" src="https://via.placeholder.com/300x400/f5f5f5/333333?text=Silver+Crest+Blender" alt="Silver Crest Blender">
+                    <img class="product-img" src="./Images/power/IMG-20250818-WA0019(1).jpg" alt="Power Bank">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Power Bank</div>
+                    <h3 class="product-title">Easypie Powerbank</h3>
+                    <div class="product-brand">Brand: Easypie</div>
+                    <div class="product-price">
+                        <span class="current-price">₦11,000</span>
+                        <span class="original-price">₦12,000</span>
+                        <span class="discount">15% OFF</span>
+                    </div>
+                    <a href="https://wa.me/2348105257672" class="product-btn whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Order Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img class="product-img" src="./Images/power/power0.png" alt="Power Bank">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Power Bank</div>
+                    <h3 class="product-title">High Speed Omni-Tank</h3>
+                    <div class="product-brand">Brand: Tecno</div>
+                    <div class="product-price">
+                        <span class="current-price">₦15,500</span>
+                        <span class="original-price">₦14,000</span>
+                        <span class="discount">14% OFF</span>
+                    </div>
+                    <a href="https://wa.me/2348105257672" class="product-btn whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Order Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img class="product-img" src="./Images/power/1754038017909.jpg" alt="Silver Crest Blender">
                 </div>
                 <div class="product-info">
                     <div class="product-category">Electrical Accessories</div>
@@ -832,7 +948,8 @@
                 <h3>Our Information</h3>
                 <p><i class="fas fa-map-marker-alt"></i> Jos, Nigeria</p>
                 <p><i class="fas fa-phone"></i> <a href="tel:+2348105257672">08105257672</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:nusaybahpowerstitch@gmail.com">nusaybahpowerstitch@gmail.com</a>
+                <p><i class="fas fa-envelope"></i> <a
+                        href="mailto:nusaybahpowerstitch@gmail.com">nusaybahpowerstitch@gmail.com</a>
                 </p>
                 <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
 
@@ -864,7 +981,7 @@
             </div>
         </div>
     </section>
-      
+
     <footer>
         <div class="social-icons">
             <a href="https://www.tiktok.com/@nusaybahpowerstitch" target="_blank">
@@ -884,4 +1001,5 @@
         <p>Professional Tailor &amp; Electronics Seller | Jos, Nigeria</p>
     </footer>
 </body>
+
 </html>
